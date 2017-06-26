@@ -38,7 +38,14 @@
 	
 	<hr>
 @if(count($meal->foods)>=1)
-<p> Foods </p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Foods</h3> </div>
+                
+                <div class="panel-body">
+
 <ul class = "list-group">
   
   @foreach($meal->foods as $food )
@@ -52,9 +59,24 @@
    @endforeach
   
  </ul>
+ </div>
+</div>
+</div>
+</div>
+</div>
 @else
-<p> No foods listed </p>
+<p> <h3>No foods listed </h3></p>
 @endif
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Add New Food</h3> </div>
+                
+                <div class="panel-body">
+ 
+
 	<form action="/meals/{{$meal->id}}/foods" method="POST">
 
  {{ csrf_field() }}
@@ -115,6 +137,12 @@
 		</div>
 
 	</form>
-
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ </div>
 @endsection
 
